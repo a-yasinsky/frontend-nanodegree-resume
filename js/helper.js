@@ -28,31 +28,32 @@ HTMLcontacts["location"] = '<li class="flex-item"><span class="orange-text">loca
 var HTMLskillsStart = '<h3 id="skills-h3">Skills at a Glance:</h3><ul id="skills" class="flex-column"></ul>';
 var HTMLskills = '<li class="flex-item"><span class="white-text">%data%</span></li>';
 
+var HTMLworkStart = '<div class="work-entry"></div>';
 var HTMLwork = [];
-HTMLwork["start"] = '<div class="work-entry"></div>';
-HTMLwork["workEmployer"] = '<a href="#">%data%';
-HTMLwork["workTitle"] = ' - %data%</a>';
-HTMLwork["workDates"] = '<div class="date-text">%data%</div>';
-HTMLwork["workLocation"] = '<div class="location-text">%data%</div>';
-HTMLwork["workDescription"] = '<p><br>%data%</p>';
+HTMLwork["employer"] = '<a href="#">%data%';
+HTMLwork["title"] = ' - %data%</a>';
+HTMLwork["dates"] = '<div class="date-text">%data%</div>';
+HTMLwork["location"] = '<div class="location-text">%data%</div>';
+HTMLwork["description"] = '<p><br>%data%</p>';
+HTMLwork["image"] = '<img src="%data%">';
 
+var HTMLprojectStart = '<div class="project-entry"></div>';
 var HTMLproject = [];
-HTMLproject["start"] = '<div class="project-entry"></div>';
 HTMLproject["title"] = '<a href="#">%data%</a>';
 HTMLproject["dates"] = '<div class="date-text">%data%</div>';
 HTMLproject["description"] = '<p><br>%data%</p>';
 HTMLproject["image"] = '<img src="%data%">';
 
+var HTMLschoolStart = '<div class="education-entry"></div>';
 var HTMLschool = [];
-HTMLschool["start"] = '<div class="education-entry"></div>';
 HTMLschool["name"] = '<a href="#">%data%';
 HTMLschool["degree"] = ' -- %data%</a>';
 HTMLschool["dates"] = '<div class="date-text">%data%</div>';
 HTMLschool["location"] = '<div class="location-text">%data%</div>';
 HTMLschool["major"] = '<em><br>Major: %data%</em>';
 
+var HTMLonlineClasses = '<h3>Online Classes</h3>';
 var HTMLonline = [];
-HTMLonline["classes"] = '<h3>Online Classes</h3>';
 HTMLonline["title"] = '<a href="#">%data%';
 HTMLonline["school"] = ' - %data%</a>';
 HTMLonline["dates"] = '<div class="date-text">%data%</div>';

@@ -17,7 +17,7 @@ function joinObject(obj) {
 			stringArray.push(obj[index]);
 		}
 	}
-	return stringArray.join();
+	return stringArray.join("");
 }
 
 function fillArrayWithTemplate(arr,template) {
@@ -26,36 +26,58 @@ function fillArrayWithTemplate(arr,template) {
 	}) : arr;
 }
 
+function displayArrayOfObjects(arrayOfObjects, HTMLStart, HTMLarray,
+							   arrayInObjName, HTMLelemName, HTMLselector) {
+	arrayOfObjects.forEach(function(element){
+			var $HTMLstart = $(HTMLStart);
+			var formatedElement = fillHTMLobj(HTMLarray, element);
+			$HTMLstart.append(joinObject(formatedElement));
+			arrayInObjName && HTMLelemName && element[arrayInObjName].forEach(function(arrayElement){
+				formattedArrayElem = HTMLarray[HTMLelemName].replace("%data%", arrayElement);
+				$HTMLstart.append(formattedArrayElem);
+			});
+			$(HTMLselector).append($HTMLstart);
+		});
+}
+
 var work = {
 	jobs: [
-	  {
-		employer: "LLC Kyrgyz Concept",
-		title: "The external auditor and consultant",
-		dates: "2013-2015",
-		description: "wwww",
-		location: "Kyrgyzstan",
-		images: [],
-	  },
 	  {
 		employer: "LLC Paida Soft",
 		title: "Founder, CEO",
 		dates: "2013-now",
-		description: "wwww",
 		location: "Kyrgyzstan",
-		images: [],
+		description: "Automated system for management of sales",
+		images: ["images/197x148.gif","images/197x148.gif"]
 	  },
+	  {
+		employer: "LLC Kyrgyz Concept",
+		title: "The external auditor and consultant",
+		dates: "2013-2015",
+		location: "Kyrgyzstan",
+		description: "Implementation of software products",
+		images: ["images/197x148.gif","images/197x148.gif"]
+	  }
 	],
+	display: function() {
+		displayArrayOfObjects(this.jobs, HTMLworkStart, HTMLwork,
+							   "images", "image", "#workExperience");
+	}
 };
 
 var project = {
 	projects: [
 	  {
-		title: "",
-		dates: "",
-		description: "",
-		images: [],
-	  },
-	]
+		title: "Electronic Treasury",
+		dates: "2014 - 2015",
+		description: "Develop a project to implement an Electronic Treasury and the e-Government of the Kyrgyz Republic",
+		images: ["images/197x148.gif","images/197x148.gif"]
+	  }
+	],
+	display: function() {
+		displayArrayOfObjects(this.projects, HTMLprojectStart, HTMLproject,
+							   "images", "image", "#projects");
+	}
 };
 
 var bio = {
@@ -85,47 +107,32 @@ var bio = {
 var education = {
 	schools: [
 	  {
-		name: "",
-		location: "",
-        degree: "",
-        dates: "",
-		url: "",
-		majors: [],
-	  },
+		name: "Kyrgyz - Russian Slavic University",
+		location: "Kyrgyzstan",
+        degree: "master",
+        dates: "2004-2009",
+		url: "http://sometesturl.kg",
+		majors: ["test1","test2"]
+	  }
 	],
 	onlineCourses: [
 	  {
-		title: "",
-		school: "",
-		dates: "",
-		url: "",
-	  },
-	]
+		title: "Accounting certificate",
+		school: "Jakobs Training",
+		dates: "2011",
+		url: "http://sometesturl.kg"
+	  }
+	],
+	display: function() {
+		displayArrayOfObjects(this.schools, HTMLschoolStart, HTMLschool,
+							  "majors", "major", "#education");
+		$("#education").append(HTMLonlineClasses);
+		displayArrayOfObjects(this.onlineCourses, HTMLschoolStart, HTMLonline,
+							  "", "", "#education");
+	}
 };
 
 bio.display();
-
-/*if (bio.skills.length > 0) {
-	var formattedSkill = "";
-	$("#header").append(HTMLskillsStart);
-	
-	for (var i = 0; i < bio.skills.length; i++) {
-	  formattedSkill = HTMLskills.replace("%data%", bio.skills[i]);
-	  $("#skills").append(formattedSkill);
-	}
-}
-
-for (job in work.jobs) {
-	$("#workExperience").append(HTMLworkStart);
-	
-	var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
-	var formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
-	var formatedEmployerTitle = formattedEmployer + formattedTitle;
-	$(".work-entry:last").append(formatedEmployerTitle);
-	var formattedWorkDates = HTMLworkDates.replace("%data%", work.jobs[job].dates);
-	$(".work-entry:last").append(formattedWorkDates);
-	var formattedLocation = HTMLworkLocation.replace("%data%", work.jobs[job].location);
-	$(".work-entry:last").append(formattedLocation);
-	var formattedDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description);
-	$(".work-entry:last").append(formattedDescription);
-}*/
+work.display();
+project.display();
+education.display();
