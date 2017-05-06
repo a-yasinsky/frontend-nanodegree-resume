@@ -13,51 +13,51 @@ These are HTML strings. As part of the course, you'll be using JavaScript functi
 replace the %data% placeholder text you see in them.
 */
 var HTMLheader = {};
-HTMLheader["name"] = '<h1 id="name">%data%</h1>';
-HTMLheader["role"] = '<span>%data%</span><hr>';
-HTMLheader["biopic"] = '<img src="%data%" class="biopic">';
-HTMLheader["welcomeMessage"] = '<span class="welcome-message">%data%</span>';
+HTMLheader.name = '<h1 id="name">%data%</h1>';
+HTMLheader.role = '<span>%data%</span><hr>';
+HTMLheader.biopic = '<img src="%data%" class="biopic">';
+HTMLheader.welcomeMessage = '<span class="welcome-message">%data%</span>';
 
 var HTMLcontacts = {};
-HTMLcontacts["mobile"] = '<li class="flex-item"><span class="orange-text">mobile</span><span class="white-text">%data%</span></li>';
-HTMLcontacts["email"] = '<li class="flex-item"><span class="orange-text">email</span><span class="white-text">%data%</span></li>';
-HTMLcontacts["twitter"] = '<li class="flex-item"><span class="orange-text">twitter</span><span class="white-text">%data%</span></li>';
-HTMLcontacts["github"] = '<li class="flex-item"><span class="orange-text">github</span><span class="white-text">%data%</span></li>';
-HTMLcontacts["location"] = '<li class="flex-item"><span class="orange-text">location</span><span class="white-text">%data%</span></li>';
+HTMLcontacts.mobile = '<li class="flex-item"><span class="orange-text">mobile</span><span class="white-text">%data%</span></li>';
+HTMLcontacts.email = '<li class="flex-item"><span class="orange-text">email</span><span class="white-text">%data%</span></li>';
+HTMLcontacts.twitter = '<li class="flex-item"><span class="orange-text">twitter</span><span class="white-text">%data%</span></li>';
+HTMLcontacts.github = '<li class="flex-item"><span class="orange-text">github</span><span class="white-text">%data%</span></li>';
+HTMLcontacts.location = '<li class="flex-item"><span class="orange-text">location</span><span class="white-text">%data%</span></li>';
 
 var HTMLskillsStart = '<h3 id="skills-h3">Skills at a Glance:</h3><ul id="skills" class="flex-column"></ul>';
 var HTMLskills = '<li class="flex-item"><span class="white-text">%data%</span></li>';
 
 var HTMLworkStart = '<div class="work-entry"></div>';
-var HTMLwork = [];
-HTMLwork["employer"] = '<a href="#">%data%';
-HTMLwork["title"] = ' - %data%</a>';
-HTMLwork["dates"] = '<div class="date-text">%data%</div>';
-HTMLwork["location"] = '<div class="location-text">%data%</div>';
-HTMLwork["description"] = '<p><br>%data%</p>';
-HTMLwork["image"] = '<img src="%data%">';
+var HTMLwork = {};
+HTMLwork.employer = '<a href="#">%data%';
+HTMLwork.title = ' - %data%</a>';
+HTMLwork.dates = '<div class="date-text">%data%</div>';
+HTMLwork.location = '<div class="location-text">%data%</div>';
+HTMLwork.description = '<p><br>%data%</p>';
+HTMLwork.image = '<img src="%data%">';
 
 var HTMLprojectStart = '<div class="project-entry"></div>';
-var HTMLproject = [];
-HTMLproject["title"] = '<a href="#">%data%</a>';
-HTMLproject["dates"] = '<div class="date-text">%data%</div>';
-HTMLproject["description"] = '<p><br>%data%</p>';
-HTMLproject["image"] = '<img src="%data%">';
+var HTMLproject = {};
+HTMLproject.title = '<a href="#">%data%</a>';
+HTMLproject.dates = '<div class="date-text">%data%</div>';
+HTMLproject.description = '<p><br>%data%</p>';
+HTMLproject.image = '<img src="%data%">';
 
 var HTMLschoolStart = '<div class="education-entry"></div>';
-var HTMLschool = [];
-HTMLschool["name"] = '<a href="#">%data%';
-HTMLschool["degree"] = ' -- %data%</a>';
-HTMLschool["dates"] = '<div class="date-text">%data%</div>';
-HTMLschool["location"] = '<div class="location-text">%data%</div>';
-HTMLschool["major"] = '<em><br>Major: %data%</em>';
+var HTMLschool = {};
+HTMLschool.name = '<a href="#">%data%';
+HTMLschool.degree = ' -- %data%</a>';
+HTMLschool.dates = '<div class="date-text">%data%</div>';
+HTMLschool.location = '<div class="location-text">%data%</div>';
+HTMLschool.major = '<em><br>Major: %data%</em>';
 
 var HTMLonlineClasses = '<h3>Online Classes</h3>';
-var HTMLonline = [];
-HTMLonline["title"] = '<a href="#">%data%';
-HTMLonline["school"] = ' - %data%</a>';
-HTMLonline["dates"] = '<div class="date-text">%data%</div>';
-HTMLonline["url"] = '<br><a href="#">%data%</a>';
+var HTMLonline = {};
+HTMLonline.title = '<a href="#">%data%';
+HTMLonline.school = ' - %data%</a>';
+HTMLonline.dates = '<div class="date-text">%data%</div>';
+HTMLonline.url = '<br><a href="#">%data%</a>';
 
 var googleMap = '<div id="map"></div>';
 
