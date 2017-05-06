@@ -131,8 +131,3 @@ var education = {
 							  "", "", "#education");
 	}
 };
-
-bio.display();
-work.display();
-project.display();
-education.display();
