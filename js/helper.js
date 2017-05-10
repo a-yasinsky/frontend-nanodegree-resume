@@ -26,7 +26,7 @@ HTMLcontacts.github = '<li class="flex-item"><span class="orange-text">github</s
 HTMLcontacts.location = '<li class="flex-item"><span class="orange-text">location</span><span class="white-text">%data%</span></li>';
 
 var HTMLskillsStart = '<h3 id="skills-h3">Skills at a Glance:</h3><ul id="skills" class="flex-column"></ul>';
-var HTMLskills = '<li class="flex-item"><span class="white-text">%data%</span></li>';
+var HTMLskills = '<li class="flex-item label"><span class="white-text">%data%</span></li>';
 
 var HTMLworkStart = '<div class="work-entry"></div>';
 var HTMLwork = {};
@@ -210,7 +210,7 @@ Uncomment the code below when you're ready to implement a Google Map!
 function init() {
 	bio.display();
 	work.display();
-	project.display();
+	projects.display();
 	education.display();
 	$("#mapDiv").append(googleMap);
 	initializeMap();

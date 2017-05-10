@@ -64,7 +64,7 @@ var work = {
     }
 };
 
-var project = {
+var projects = {
     projects: [{
         title: "Electronic Treasury",
         dates: "2014 - 2015",
@@ -88,7 +88,7 @@ var bio = {
         github: "a-yasinsky",
         location: "Bishkek, Kyrgyzstan",
     },
-    skills: ["html", "css", "javascript", "jQuery", "Knockout.js", "php",
+    skills: ["html", "css", "javascript", "jQuery", "php",
         "kohana - php framework", "yii - php framework", "sql", "1C"
     ],
     display: function() {

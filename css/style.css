@@ -26,7 +26,7 @@ h6 {
 
 h1 {
   font-size: 40px;
-  color: #f5a623;
+  color: #f0563d;
   line-height: 48px;
   display: inline;
 }
@@ -143,9 +143,23 @@ a {
 
 .flex-column {
   display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   padding: 10px;
+}
+
+.label {
+    display: inline;
+    padding: .2em .6em .3em;
+	margin-right: 5px;
+    font-size: 75%;
+    font-weight: 700;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .25em;
+	background-color: #337ab7;
 }
 
 .center-content {
